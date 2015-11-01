@@ -22,6 +22,10 @@ immutable Credit = `
 * Kawaz community
   http://www.kawaz.org/
 
+* alphaKAI
+  Fix program(for dmd 2.068)
+  http://alpha-kai-net.info
+
 * inspired by
   Geometry Wars : Retro Evolved
 `;

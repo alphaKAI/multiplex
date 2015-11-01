@@ -455,7 +455,7 @@ version (StbVorbis) {
 
   private class OggStreamSource : Source {
     private:
-    Buffer _buffers[NumBuffers];
+    Buffer[NumBuffers] _buffers;
     bool _loop;
     bool _playing;
 
@@ -488,7 +488,7 @@ version (StbVorbis) {
     }
 
     private bool insertChunk(ALuint buffer) {
-      ALshort pcm[BufferSize];
+      ALshort[BufferSize] pcm;
       int size;
 
       while (size < BufferSize) {

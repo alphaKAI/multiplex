@@ -28,6 +28,13 @@ multiplex depends on...
 * [KST32B](http://www.vector.co.jp/soft/data/writing/se119277.html): minimal stroke-font.
 * [stb_vorbis/stb_image](http://www.nothings.org/): public domain C ogg vorbis/image loading library.
 
+## Note
+Maybe you need to install GLFW manually.  
+(Possibly, OpenAL and other also there may be a need to do so.)  
+
+If you are using OS X, you should install with Homebrew.  
+`% brew install homebrew/versions/glfw2`  
+
 ## License
 
 Source code is licensed under the GPL3. see [LICENSE](./LICENSE).  

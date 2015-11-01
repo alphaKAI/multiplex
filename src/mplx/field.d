@@ -265,7 +265,7 @@ class Field {
       _program.draw(DrawMode.Lines);
 
       Primitive().program.use();
-      Primitive().program.pos.bindData(CirclePos, BufferType.Dynamic);
+      Primitive().program.pos.bindData(CirclePos(), BufferType.Dynamic);
       foreach (ref v; _circle) {
         if (v.count == 0) {
           Primitive().program.uniform!"color"(v.color);

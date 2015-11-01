@@ -252,7 +252,8 @@ class ReplayScene : FrameScene {
       _info[data.mode] ~= data;
     }
 
-    foreach (ref v; _info) v.sort;
+    import std.algorithm: sort;
+    foreach (ref v; _info) std.algorithm.sort(v);
   }
 
   override void fini() {

@@ -30,9 +30,15 @@ private ubyte[8] quadLine(int a, int b, int c, int d) {
   return [e,f,f,g,g,h,h,e];
 }
 
-immutable(float)[] circleLine() {
-  return reduce!"a~b"(cast(immutable(float)[])[],
+immutable(float)[] function() circleLine() {
+  //To avoid compile time error
+  //Maybe reduce's spec has been changed.
+/*  return reduce!"a~b"(cast(immutable(float)[])[],
       iota(64).map!(i => vec(cos(i*PI/32), sin(i*PI/32), 0))());
+ */
+  return () =>
+        cast(immutable(float)[])
+        iota(64).map!(i => vec(cos(i*PI/32), sin(i*PI/32), 0)).reduce!"a~b".array;
 }
 
 Model playerModel(VBO!(float, 3) pos, VBO!(float, 2) tex) {

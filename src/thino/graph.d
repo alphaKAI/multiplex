@@ -565,7 +565,7 @@ class ShaderProgram(locations ...) {
     mixin(locationHandlerGen(locations));
   }
 
-  private static string locationHandlerGen(string ls[] ...) {
+  private static string locationHandlerGen(string[] ls ...) {
     immutable all = q{
       #locationDeclaration
       #uniformBinder

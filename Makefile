@@ -14,7 +14,7 @@ else
   EXT = .o
   UNAME = ${shell uname}
   ifeq ($(UNAME),Darwin)
-    LIBS = -L-lglfw -L-framework -LOpenGL -L-framework -LOpenAL -L-headerpad_max_install_names
+    LIBS = -L-L/usr/local/lib -L-lglfw -L-framework -LOpenGL -L-framework -LOpenAL -L-headerpad_max_install_names
   else
     LIBS = -L-lglfw -L-lGL -L-lopenal
   endif
