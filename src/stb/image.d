@@ -13,7 +13,7 @@ extern (C):
 // Basic usage (see HDR discussion below):
 //    int x,y,n;
 //    unsigned char *data = stbi_load(filename, &x, &y, &n, 0);
-//    // ... process data if not NULL ... 
+//    // ... process data if not NULL ...
 //    // ... x = width, y = height, n = # 8-bit components per pixel ...
 //    // ... replace '0' with '1'..'4' to force that many components per pixel
 //    stbi_image_free(data)
@@ -74,7 +74,7 @@ extern (C):
 // (linear) floats to preserve the full dynamic range:
 //
 //    float *data = stbi_loadf(filename, &x, &y, &n, 0);
-// 
+//
 // If you load LDR images through this interface, those images will
 // be promoted to floating point values, run through the inverse of
 // constants corresponding to the above:
@@ -89,7 +89,7 @@ extern (C):
 //
 //     stbi_is_hdr(char *filename);
 
-import std.c.stdio;
+import core.stdc.stdio;
 
 enum STBI_VERSION = 1;
 
@@ -245,4 +245,3 @@ void stbi_install_YCbCr_to_RGB(stbi_YCbCr_to_RGB_run func);
 */
 
 ////   end header file   /////////////////////////////////////////////////////
-

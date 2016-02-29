@@ -6,7 +6,7 @@ extern (C):
 //  HEADER BEGINS HERE
 //
 
-import std.c.stdio;
+import core.stdc.stdio;
 
 ///////////   THREAD SAFETY
 
@@ -296,4 +296,3 @@ enum STBVorbisError
 //  HEADER ENDS HERE
 //
 //////////////////////////////////////////////////////////////////////////////
-

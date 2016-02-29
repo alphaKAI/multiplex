@@ -1,4 +1,9 @@
-OUTPUT = multiplex
+
+ifeq ($(OS),Windows_NT)
+	OUTPUT = multiplex.exe
+else
+  OUTPUT = multiplex
+endif
 
 DMD = dmd
 #OPTS = -Isrc -w -unittest -debug -version=StbImage -version=StbVorbis
